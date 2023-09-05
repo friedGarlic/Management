@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.Common
 {
-    internal class LeaveAllocationDTO : BaseDTO
+    public class LeaveAllocationDTO : BaseDTO
     {
         public string EmployeeId { get; set; }
 

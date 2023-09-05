@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Management.Application.Features.DataType.Requests.Queries
+namespace Management.Application.Features.LeaveRequest.Request.Queries
 {
-    internal class GetDataTypeListRequest : IRequest<List<DataTypeDTO>>
+    internal class GetLeaveRequest_ListRequest : IRequest<List<LeaveRequestDTO>>
     {
     }
 }

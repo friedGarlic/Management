@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.Common
 {
-    internal class DataTypeDTO : BaseDTO
+    public class DataTypeDTO : BaseDTO
     {
         public string Name { get; set; }
     }

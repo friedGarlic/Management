@@ -12,18 +12,18 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.DataType.Handlers.Queries
 {
-    internal class GetDataTypeListRequestHandler : IRequestHandler<GetDataTypeListRequest, List<DataTypeDTO>>
+    internal class GetDataType_ListRequestHandler : IRequestHandler<GetDataType_ListRequest, List<DataTypeDTO>>
     {
         public readonly IDataTypeRepository _dataTypeRepository;
         private readonly IMapper _mapper;
 
 
-        public GetDataTypeListRequestHandler(IDataTypeRepository dataTypeRepository, IMapper mapper)
+        public GetDataType_ListRequestHandler(IDataTypeRepository dataTypeRepository, IMapper mapper)
         {
             _dataTypeRepository = dataTypeRepository;
             _mapper = mapper;
         }
-        public async Task<List<DataTypeDTO>> Handle(GetDataTypeListRequest request, CancellationToken cancellationToken)
+        public async Task<List<DataTypeDTO>> Handle(GetDataType_ListRequest request, CancellationToken cancellationToken)
         {
             var dataType = await _dataTypeRepository.GetAll();
             return _mapper.Map<List<DataTypeDTO>>(dataType);

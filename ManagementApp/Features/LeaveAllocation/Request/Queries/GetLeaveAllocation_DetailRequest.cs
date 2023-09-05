@@ -6,9 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Management.Application.Features.DataType.Requests.Queries
+namespace Management.Application.Features.LeaveAllocation.Request.Queries
 {
-    internal class GetDataTypeDetailRequest : IRequest<DataTypeDTO>
+    internal class GetLeaveAllocation_DetailRequest : IRequest<LeaveAllocationDTO>
     {
+        public int Id { get; set; }
     }
 }
