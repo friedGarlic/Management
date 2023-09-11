@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Management;
-using Management.Application.DTOs.Common;
+using Management.Application.DTOs.DataType;
+using Management.Application.DTOs.LeaveAllocation;
 
 namespace ManagementApp.Profiles
 {

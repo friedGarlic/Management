@@ -1,4 +1,4 @@
-﻿using Management.Application.DTOs.Common;
+﻿using Management.Application.DTOs.DataType;
 using MediatR;
 using System;
 using System.Collections.Generic;

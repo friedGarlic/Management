@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Management.Application.DTOs.Common;
+using Management.Application.DTOs.DataType;
 
-namespace Management.Application.DTOs.Common
+namespace Management.Application.DTOs.LeaveRequest
 {
     public class LeaveRequestDTO : BaseDTO
     {
-        public string EmployeeId { get; set; }
-
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public DateTime DateRequested { get; set; }

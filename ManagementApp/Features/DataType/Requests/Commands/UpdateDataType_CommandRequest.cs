@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Management.Application.DTOs.Common
+namespace Management.Application.Features.DataType.Requests.Commands
 {
-    public class DataTypeDTO : BaseDTO
+    internal class UpdateDataType_CommandRequest
     {
-        public string Name { get; set; }
     }
 }

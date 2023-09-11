@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Management.Application.DTOs.Common;
+using Management.Application.DTOs.DataType;
 using Management.Application.Features.DataType.Requests.Queries;
 using ManagementApp.Contracts;
 using MediatR;
