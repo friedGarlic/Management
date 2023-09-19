@@ -4,14 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ManagementApp.Contracts
-{
-    public interface IGenericRepository<T> where T : class
+    namespace ManagementApp.Contracts
     {
-        Task<T> Get (int id);
-        Task<IReadOnlyList<T>> GetAll();
-        Task<T> Create (T entity);
-        Task<T> Update (T entity);
-        Task<T> Delete (T entity);
+        public interface IGenericRepository<T> where T : class
+        {
+            Task<T> Get (int id);
+            Task<IReadOnlyList<T>> GetAll();
+            Task<T> Create (T entity);
+            Task<T> Update (T entity);
+            Task<T> Delete (T entity);
+            Task<T> Add (T entity);
+        }
     }
-}

@@ -32,7 +32,6 @@ namespace Management.Application.Features.DataType.Handlers.Commands
             await _repository.Update(dataType);
 
             return Unit.Value;
-
         }
     }
 }
