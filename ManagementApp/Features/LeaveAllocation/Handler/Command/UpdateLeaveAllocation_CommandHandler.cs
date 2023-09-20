@@ -22,7 +22,9 @@ namespace Management.Application.Features.LeaveAllocation.Handler.Command
         }
         public async Task<Unit> Handle (UpdateLeaveAllocation_CommandRequest request, CancellationToken token)
         {
-            
+            var leaveAlloc = await _repository.Get(request.LeaveAllocationDTO.Id);
+            _mapper.Map(request.LeaveAllocationDTO, leaveAlloc);
+            await _repository.Update(leaveAlloc);
             return Unit.Value;
         }
     }
