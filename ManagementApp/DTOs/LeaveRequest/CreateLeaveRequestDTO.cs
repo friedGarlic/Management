@@ -19,6 +19,6 @@ namespace Management.Application.DTOs.LeaveRequest
         
         public DataTypeDTO LeaveType { get; set; }
 
-        public int DataTypeId { get; set; }
+        public int DataTypeId { get; set; } // whether leave is for sick, vacation etc
     }
 }
