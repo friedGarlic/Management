@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveRequest.Request.Command
 {
-    internal class UpdateLeaveRequest_CommandRequest : IRequest<Unit>
+    internal class DeleteLeaveRequest_CommandRequest : IRequest<Unit>
     {
         public LeaveRequestDTO LeaveRequestDTO { get; set; }
-
-        public ChangeLeaveRequestApprovalDTO ChangeLeaveRequestApprovalDTO { get; set; }
     }
 }

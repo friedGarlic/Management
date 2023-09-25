@@ -1,4 +1,5 @@
 ﻿using Management.Application.DTOs.LeaveAllocation;
+using Management.Application.DTOs.LeaveRequest;
 using MediatR;
 using System;
 using System.Collections.Generic;

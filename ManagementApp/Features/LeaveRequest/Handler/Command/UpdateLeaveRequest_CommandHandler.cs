@@ -23,16 +23,19 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
 
         public async Task<Unit> Handle(UpdateLeaveRequest_CommandRequest commandRequest, CancellationToken token)
         {
-            //get id
             var leaveRequest = await _repository.Get(commandRequest.LeaveRequestDTO.Id);
 
-            //map
-            _mapper.Map(commandRequest.LeaveRequestDTO, leaveRequest);
+            if (commandRequest.LeaveRequestDTO != null)
+            {
+                _mapper.Map(commandRequest.LeaveRequestDTO, leaveRequest);
 
-            //update
-            await _repository.Update(leaveRequest);
+                await _repository.Update(leaveRequest);
+            }
+            if (commandRequest.ChangeLeaveRequestApprovalDTO != null)
+            {
+                await _repository.ChangeLeaveRequestApproval(leaveRequest, commandRequest.ChangeLeaveRequestApprovalDTO.IsApproved);
+            }
 
-            //return value
             return Unit.Value;
         }
     }
