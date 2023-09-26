@@ -24,6 +24,8 @@ namespace Management.Application.Features.DataType.Handlers.Commands
 
         public async Task<int> Handle(CreateDataType_CommandRequest request, CancellationToken cancellationToken)
         {
+            //TODO implement validation before doing anything
+
             var dataType = _mapper.Map<Management.DataType>(request.DataTypeDTO);
 
             dataType = await _repository.Add(dataType);

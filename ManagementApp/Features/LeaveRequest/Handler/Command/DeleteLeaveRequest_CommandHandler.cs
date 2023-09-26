@@ -25,8 +25,6 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
         {
             var leaveRequest = await _repository.Get(commandRequest.LeaveRequestDTO.Id);
 
-            _mapper.Map(commandRequest.LeaveRequestDTO.Id, leaveRequest);
-
             await _repository.Delete(leaveRequest);
 
             return Unit.Value;

@@ -24,6 +24,8 @@ namespace Management.Application.Features.LeaveAllocation.Handler.Command
 
         public async Task<int> Handle(CreateLeaveAllocation_CommandRequest request, CancellationToken cancellationToken)
         {
+            //TODO implement validation before doing anything shit
+
             var leaveAlloc = _mapper.Map<Management.LeaveAllocation>(request.LeaveAllocationDTO);
 
             leaveAlloc = await _repository.Add(leaveAlloc);

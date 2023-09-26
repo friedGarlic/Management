@@ -10,25 +10,25 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveAllocation.Handler.Command
 {
-    internal class UpdateLeaveAllocation_CommandHandler : IRequestHandler<UpdateLeaveAllocation_CommandRequest, Unit>
+    internal class DeleteLeaveAllocation_CommandHandler : IRequestHandler<DeleteLeaveAllocation_CommandRequest, int>
     {
         private readonly ILeaveAllocationRepository _repository;
         private readonly Mapper _mapper;
 
-        public UpdateLeaveAllocation_CommandHandler(ILeaveAllocationRepository repository, Mapper mapper)
+        public DeleteLeaveAllocation_CommandHandler(ILeaveAllocationRepository repository, Mapper mapper)
         {
             _repository = repository;
             _mapper = mapper;
         }
-        public async Task<Unit> Handle (UpdateLeaveAllocation_CommandRequest request, CancellationToken token)
+
+        public async Task<int> Handle(DeleteLeaveAllocation_CommandRequest request, CancellationToken cancellationToken)
         {
+            //get id of request
             var leaveAlloc = await _repository.Get(request.LeaveAllocationDTO.Id);
+            //delete
+            await _repository.Delete(leaveAlloc);
 
-            _mapper.Map(request.LeaveAllocationDTO, leaveAlloc);
-
-            await _repository.Update(leaveAlloc);
-
-            return Unit.Value;
+            return leaveAlloc.Id;
         }
     }
 }

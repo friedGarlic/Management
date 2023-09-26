@@ -23,6 +23,8 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
 
         public async Task<int> Handle(CreateLeaveRequest_CommandRequest commandRequest, CancellationToken token)
         {
+            //TODO add validation before creating any shit
+
             var leaveRequest = _mapper.Map<Management.LeaveRequest>(commandRequest);
 
             leaveRequest = await _repository.Add(leaveRequest);
