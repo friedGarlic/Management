@@ -12,8 +12,6 @@ namespace Management.Application.DTOs.LeaveAllocation
     {
         public int NumberOfDays { get; set; }
 
-        public DataTypeDTO LeaveType { get; set; }
-
         public int LeaveTypeId { get; set; }
 
         public int Period { get; set; }

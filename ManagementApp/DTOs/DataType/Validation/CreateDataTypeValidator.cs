@@ -21,7 +21,6 @@ namespace Management.Application.DTOs.DataType.Validation
                 .NotEmpty().WithMessage("{PropertyName} is required")
                 .NotNull()
                 .LessThan(6).WithMessage("{PropertyName} can only be less than 6");
-                
         }
     }
 }

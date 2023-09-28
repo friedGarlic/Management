@@ -1,4 +1,7 @@
 ﻿using AutoMapper;
+using FluentValidation;
+using Management.Application.DTOs.DataType.Validation;
+using Management.Application.DTOs.LeaveRequest.Validator;
 using Management.Application.Features.LeaveRequest.Request.Command;
 using ManagementApp.Contracts;
 using MediatR;
@@ -24,7 +27,7 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
         public async Task<int> Handle(CreateLeaveRequest_CommandRequest commandRequest, CancellationToken token)
         {
             //TODO add validation before creating any shit
-
+            
             var leaveRequest = _mapper.Map<Management.LeaveRequest>(commandRequest);
 
             leaveRequest = await _repository.Add(leaveRequest);

@@ -7,7 +7,7 @@ using Management.Application.DTOs.Common;
 
 namespace Management.Application.DTOs.DataType
 {
-    public class DataTypeDTO : BaseDTO
+    public class DataTypeDTO : BaseDTO, IDataTypeDTO
     {
         public string Name { get; set; }
 

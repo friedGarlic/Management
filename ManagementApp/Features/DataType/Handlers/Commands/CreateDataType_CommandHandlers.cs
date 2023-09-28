@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Management.Application.DTOs.DataType.Validation;
+using FluentValidation;
 
 namespace Management.Application.Features.DataType.Handlers.Commands
 {
@@ -26,6 +28,12 @@ namespace Management.Application.Features.DataType.Handlers.Commands
         {
             //TODO implement validation before doing anything
 
+            var validator = new CreateDataTypeValidator();
+            var validatorResult = await validator.ValidateAsync((DTOs.DataType.CreateDataTypeDTO)request.DataTypeDTO);
+
+            if (validatorResult.IsValid == false)
+                throw new NotImplementedException();
+            
             var dataType = _mapper.Map<Management.DataType>(request.DataTypeDTO);
 
             dataType = await _repository.Add(dataType);
