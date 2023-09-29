@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Management.Application.DTOs.LeaveAllocation;
+using Management.Application.DTOs.LeaveAllocation.Process;
 using Management.Application.Features.DataType.Requests.Queries;
 using Management.Application.Features.LeaveAllocation.Request.Queries;
 using ManagementApp.Contracts;

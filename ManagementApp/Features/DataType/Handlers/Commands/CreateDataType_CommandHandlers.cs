@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Management.Application.DTOs.DataType.Validation;
 using FluentValidation;
+using Management.Application.DTOs.DataType.Process;
 
 namespace Management.Application.Features.DataType.Handlers.Commands
 {
@@ -26,10 +27,8 @@ namespace Management.Application.Features.DataType.Handlers.Commands
 
         public async Task<int> Handle(CreateDataType_CommandRequest request, CancellationToken cancellationToken)
         {
-            //TODO implement validation before doing anything
-
             var validator = new CreateDataTypeValidator();
-            var validatorResult = await validator.ValidateAsync((DTOs.DataType.CreateDataTypeDTO)request.DataTypeDTO);
+            var validatorResult = await validator.ValidateAsync((CreateDataTypeDTO)request.DataTypeDTO);
 
             if (validatorResult.IsValid == false)
                 throw new NotImplementedException();

@@ -14,5 +14,8 @@ using System.Threading.Tasks;
             Task<T> Update (T entity);
             Task<T> Delete (T entity);
             Task<T> Add (T entity);
-        }
+
+            //Validation
+            Task<bool> RequestExists(int id);
+    }
     }

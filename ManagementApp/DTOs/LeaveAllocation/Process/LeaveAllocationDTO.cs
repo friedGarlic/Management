@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Management.Application.DTOs.Common;
-using Management.Application.DTOs.DataType;
+using Management.Application.DTOs.DataType.Process;
 
-namespace Management.Application.DTOs.LeaveAllocation
+namespace Management.Application.DTOs.LeaveAllocation.Process
 {
     public class LeaveAllocationDTO : BaseDTO
     {

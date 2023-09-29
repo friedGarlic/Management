@@ -1,14 +1,13 @@
-﻿using System;
+﻿using Management.Application.DTOs.DataType.Process;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Management.Application.DTOs.Common;
-using Management.Application.DTOs.DataType;
 
-namespace Management.Application.DTOs.LeaveRequest
+namespace Management.Application.DTOs.LeaveRequest.Process
 {
-    public class LeaveRequestDTO : BaseDTO
+    internal interface ILeaveRequestDTO
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Management.Application.DTOs.LeaveAllocation;
+using Management.Application.DTOs.LeaveAllocation.Process;
 using MediatR;
 
 namespace Management.Application.Features.LeaveAllocation.Request.Command

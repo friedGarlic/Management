@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Management.Application.DTOs.LeaveRequest;
+using Management.Application.DTOs.LeaveRequest.Process;
 using Management.Application.Features.LeaveRequest.Request.Queries;
 using ManagementApp.Contracts;
 using MediatR;

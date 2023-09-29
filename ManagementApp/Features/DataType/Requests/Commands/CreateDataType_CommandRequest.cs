@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Management.Application.DTOs.DataType;
+using Management.Application.DTOs.DataType.Process;
 using MediatR;
 
 namespace Management.Application.Features.DataType.Requests.Commands

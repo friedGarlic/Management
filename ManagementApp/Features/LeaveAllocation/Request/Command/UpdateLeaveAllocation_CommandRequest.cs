@@ -1,4 +1,4 @@
-﻿using Management.Application.DTOs.LeaveAllocation;
+﻿using Management.Application.DTOs.LeaveAllocation.Process;
 using Management.Application.DTOs.LeaveRequest;
 using MediatR;
 using System;

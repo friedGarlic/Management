@@ -1,4 +1,4 @@
-﻿using Management.Application.DTOs.LeaveRequest;
+﻿using Management.Application.DTOs.LeaveRequest.Process;
 using MediatR;
 using System;
 using System.Collections.Generic;

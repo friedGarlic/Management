@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Management;
-using Management.Application.DTOs.DataType;
-using Management.Application.DTOs.LeaveAllocation;
+using Management.Application.DTOs.DataType.Process;
+using Management.Application.DTOs.LeaveAllocation.Process;
 
 namespace ManagementApp.Profiles
 {

@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Management.Application.DTOs.LeaveAllocation
+namespace Management.Application.DTOs.LeaveAllocation.Process
 {
     internal class CreateLeaveAllocationDTO : BaseDTO
     {

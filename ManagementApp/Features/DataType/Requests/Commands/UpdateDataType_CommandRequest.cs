@@ -1,4 +1,4 @@
-﻿using Management.Application.DTOs.DataType;
+﻿using Management.Application.DTOs.DataType.Process;
 using MediatR;
 using System;
 using System.Collections.Generic;

@@ -10,5 +10,6 @@ namespace ManagementApp.Contracts
 
         ///request for source, approval Change approval
         Task ChangeLeaveRequestApproval(LeaveRequest request, bool? approval);
+
     }
 }
