@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveAllocation.Validation
 {
-    internal class ILeaveAllocationValidator : AbstractValidator<LeaveAllocationDTO>
+    internal class ILeaveAllocation_ValidatorDTO : AbstractValidator<LeaveAllocationDTO>
     {
-        private readonly ILeaveAllocationRepository _repository;
+        private readonly IDataTypeRepository _repository;
 
-        public ILeaveAllocationValidator(ILeaveAllocationRepository repository)
+        public ILeaveAllocation_ValidatorDTO(IDataTypeRepository repository)
         {
             _repository = repository;
 
@@ -22,9 +22,9 @@ namespace Management.Application.DTOs.LeaveAllocation.Validation
                 .GreaterThan(1).WithMessage("{PropertyName} has to be greater than {ComparisonValue}");
 
             RuleFor(p => p.DateCreated)
-                .NotEmpty().WithMessage("{PropertyName} is empty");
+                .NotEmpty().WithMessage("{PropertyName} is empty"); 
 
-            RuleFor(p => p.Period)
+            RuleFor(p => p.Period)  
                 .NotEmpty().WithMessage("{PropertyName} is empty");
 
             RuleFor(p => p.Id)

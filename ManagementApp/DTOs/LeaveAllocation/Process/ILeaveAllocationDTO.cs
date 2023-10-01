@@ -1,14 +1,13 @@
-﻿using System;
+﻿using Management.Application.DTOs.DataType.Process;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Management.Application.DTOs.Common;
-using Management.Application.DTOs.DataType.Process;
 
 namespace Management.Application.DTOs.LeaveAllocation.Process
 {
-    public class LeaveAllocationDTO : BaseDTO, ILeaveAllocationDTO
+    internal interface ILeaveAllocationDTO
     {
         public int NumberOfDays { get; set; }
 

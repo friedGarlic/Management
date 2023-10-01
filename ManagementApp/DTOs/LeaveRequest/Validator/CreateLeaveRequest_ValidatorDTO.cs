@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveRequest.Validator
 {
-    internal class CreateLeaveRequestValidator : AbstractValidator<CreateLeaveRequestDTO>
+    internal class CreateLeaveRequest_ValidatorDTO : AbstractValidator<CreateLeaveRequestDTO>
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
 
-        public CreateLeaveRequestValidator(ILeaveRequestRepository repository)
+        public CreateLeaveRequest_ValidatorDTO(ILeaveRequestRepository repository)
         {
             _leaveRequestRepository = repository;
 

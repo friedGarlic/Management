@@ -15,7 +15,6 @@ namespace Management.Application.DTOs.DataType.Validation
             IDataTypeValidator iValidator = new IDataTypeValidator();
 
             Include(iValidator);
-
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveRequest.Validator
 {
-    internal class UpdateLeaveRequestValidator
+    internal class UpdateLeaveRequest_ValidatorDTO
     {
     }
 }
