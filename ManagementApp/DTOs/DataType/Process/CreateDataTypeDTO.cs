@@ -7,7 +7,10 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.DataType.Process
 {
-    internal class CreateDataTypeDTO : DataTypeDTO, IDataTypeDTO
+    internal class CreateDataTypeDTO : IDataTypeDTO
     {
+        public string Name { get; set; }
+
+        public int LeaveTypeDefaultDays { get; set; }
     }
 }

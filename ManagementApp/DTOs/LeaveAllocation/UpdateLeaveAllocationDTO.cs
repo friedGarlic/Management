@@ -1,5 +1,6 @@
 ﻿using Management.Application.DTOs.Common;
 using Management.Application.DTOs.DataType.Process;
+using Management.Application.DTOs.LeaveAllocation.Process;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveAllocation
 {
-    internal class UpdateLeaveAllocationDTO : BaseDTO
+    internal class UpdateLeaveAllocationDTO : BaseDTO, ILeaveAllocationDTO
     {
         public int NumberOfDays { get; set; }
 
@@ -17,5 +18,7 @@ namespace Management.Application.DTOs.LeaveAllocation
         public int LeaveTypeId { get; set; }
 
         public int Period { get; set; }
+
+        public DateTime DateCreated { get; set; }
     }
 }

@@ -11,25 +11,13 @@ namespace Management.Application.DTOs.LeaveRequest.Validator
 {
     internal class CreateLeaveRequest_ValidatorDTO : AbstractValidator<CreateLeaveRequestDTO>
     {
-        private readonly ILeaveRequestRepository _leaveRequestRepository;
+        private readonly IDataTypeRepository _dataTypeRepo;
 
-        public CreateLeaveRequest_ValidatorDTO(ILeaveRequestRepository repository)
+        public CreateLeaveRequest_ValidatorDTO(IDataTypeRepository repository)
         {
-            _leaveRequestRepository = repository;
+            _dataTypeRepo = repository;
 
-            RuleFor(p => p.StartDate)
-                .LessThan(p => p.EndDate).WithMessage("{PropertyName} should be before {ComparisonValue}");
-
-            RuleFor(p => p.EndDate)
-                .GreaterThan(p => p.StartDate).WithMessage("{PropertyName} should be after {ComparisonValue}");
-
-            RuleFor(p => p.LeaveTypeId)
-                .GreaterThan(0)
-                .MustAsync(async (id, token) =>
-                {
-                    var leaveRequestExist = await _leaveRequestRepository.RequestExists(id);
-                    return !leaveRequestExist;
-                }).WithMessage("{PropertyName} does not exist, [Lambda method return !Exist value]");
+            Include(new ILeaveRequest_ValidatorDTO(_dataTypeRepo));
         }
     }
 }
