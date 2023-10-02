@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Management.Application.DTOs.DataType.Validation;
+using Management.Application.Exceptions;
 using Management.Application.Features.DataType.Requests.Commands;
 using ManagementApp.Contracts;
 using MediatR;
@@ -28,6 +29,9 @@ namespace Management.Application.Features.DataType.Handlers.Commands
         {
             var validator = new UpdateDataTypeValidator();
             var validatorResult = await validator.ValidateAsync(request.DataTypeDTO);
+
+            if (validatorResult.IsValid == false)
+                throw new ValidationException(validatorResult);
 
             var dataType = await _repository.Get(request.DataTypeDTO.Id);
 
