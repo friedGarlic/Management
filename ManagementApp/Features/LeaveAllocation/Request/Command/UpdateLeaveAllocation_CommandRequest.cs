@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveAllocation.Request.Command
 {
-    internal class UpdateLeaveAllocation_CommandRequest : IRequest<Unit>
+    public class UpdateLeaveAllocation_CommandRequest : IRequest<Unit>
     {
         public LeaveAllocationDTO LeaveAllocationDTO { get; set; }
     }

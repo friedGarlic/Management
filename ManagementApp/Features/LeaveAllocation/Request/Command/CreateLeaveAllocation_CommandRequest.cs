@@ -8,7 +8,7 @@ using MediatR;
 
 namespace Management.Application.Features.LeaveAllocation.Request.Command
 {
-    internal class CreateLeaveAllocation_CommandRequest : IRequest<int>
+    public class CreateLeaveAllocation_CommandRequest : IRequest<int>
     {
         public LeaveAllocationDTO LeaveAllocationDTO { get; set; }
     }

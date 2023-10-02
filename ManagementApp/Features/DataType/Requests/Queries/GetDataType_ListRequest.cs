@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.DataType.Requests.Queries
 {
-    internal class GetDataType_ListRequest : IRequest<List<DataTypeDTO>>
+    public class GetDataType_ListRequest : IRequest<List<DataTypeDTO>>
     {
     }
 }

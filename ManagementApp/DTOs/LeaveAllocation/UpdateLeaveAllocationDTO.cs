@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveAllocation
 {
-    internal class UpdateLeaveAllocationDTO : BaseDTO, ILeaveAllocationDTO
+    public class UpdateLeaveAllocationDTO : BaseDTO, ILeaveAllocationDTO
     {
         public int NumberOfDays { get; set; }
 

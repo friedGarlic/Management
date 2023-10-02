@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveRequest.Request.Queries
 {
-    internal class GetLeaveRequest_ListRequest : IRequest<List<LeaveRequestDTO>>
+    public class GetLeaveRequest_ListRequest : IRequest<List<LeaveRequestDTO>>
     {
     }
 }

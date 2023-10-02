@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.DataType.Process
 {
-    internal class CreateDataTypeDTO : IDataTypeDTO
+    public class CreateDataTypeDTO : IDataTypeDTO
     {
         public string Name { get; set; }
 

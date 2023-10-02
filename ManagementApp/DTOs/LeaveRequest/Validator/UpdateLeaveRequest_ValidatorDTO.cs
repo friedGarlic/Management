@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveRequest.Validator
 {
-    internal class UpdateLeaveRequest_ValidatorDTO : AbstractValidator<UpdateLeaveRequestDTO>
+    public class UpdateLeaveRequest_ValidatorDTO : AbstractValidator<UpdateLeaveRequestDTO>
     {
         private readonly IDataTypeRepository _dataTypeRepository;
 

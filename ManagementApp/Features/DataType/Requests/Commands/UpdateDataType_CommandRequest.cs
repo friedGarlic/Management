@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.DataType.Requests.Commands
 {
-    internal class UpdateDataType_CommandRequest : IRequest<Unit>
+    public class UpdateDataType_CommandRequest : IRequest<Unit>
     {
         public DataTypeDTO DataTypeDTO { get; set; }
     }

@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveRequest.Handler.Command
 {
-    internal class CreateLeaveRequest_CommandHandler : IRequestHandler<CreateLeaveRequest_CommandRequest, int>
+    public class CreateLeaveRequest_CommandHandler : IRequestHandler<CreateLeaveRequest_CommandRequest, int>
     {
         private readonly ILeaveRequestRepository _repository;
         private readonly IDataTypeRepository _dataTypeRepository;

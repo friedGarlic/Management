@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveRequest.Request.Command
 {
-    internal class DeleteLeaveRequest_CommandRequest : IRequest<Unit>
+    public class DeleteLeaveRequest_CommandRequest : IRequest<Unit>
     {
         public LeaveRequestDTO LeaveRequestDTO { get; set; }
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveAllocation.Request.Command
 {
-    internal class DeleteLeaveAllocation_CommandRequest : IRequest<int>
+    public class DeleteLeaveAllocation_CommandRequest : IRequest<int>
     {
         public LeaveAllocationDTO LeaveAllocationDTO { get; set; }
     }

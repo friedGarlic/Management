@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.DataType.Validation
 {
-    internal class UpdateDataTypeValidator : AbstractValidator<DataTypeDTO>
+    public class UpdateDataTypeValidator : AbstractValidator<DataTypeDTO>
     {
         public UpdateDataTypeValidator()
         {

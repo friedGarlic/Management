@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveRequest
 {
-    internal class LeaveRequestListDTO : BaseDTO
+    public class LeaveRequestListDTO : BaseDTO
     {
         public DataTypeDTO LeaveType { get; set; }
 

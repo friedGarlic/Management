@@ -1,15 +1,10 @@
 ﻿using FluentValidation;
 using Management.Application.DTOs.LeaveAllocation.Process;
 using ManagementApp.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveAllocation.Validation
 {
-    internal class CreateLeaveAllocation_ValidatorDTO : AbstractValidator<CreateLeaveAllocationDTO>
+    public class CreateLeaveAllocation_ValidatorDTO : AbstractValidator<CreateLeaveAllocationDTO>
     {
         private readonly IDataTypeRepository _repository;
 

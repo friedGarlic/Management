@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveAllocation.Handler.Queries
 {
-    internal class GetLeaveAllocation_ListRequestHandler : IRequestHandler<GetLeaveAllocation_ListRequest, List<LeaveAllocationDTO>>
+    public class GetLeaveAllocation_ListRequestHandler : IRequestHandler<GetLeaveAllocation_ListRequest, List<LeaveAllocationDTO>>
     {
         private readonly ILeaveAllocationRepository _leaveAllocationRepository;
         private readonly IMapper _mapper;

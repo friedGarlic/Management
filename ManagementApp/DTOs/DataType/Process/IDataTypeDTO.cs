@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.DataType.Process
 {
-    internal interface IDataTypeDTO
+    public interface IDataTypeDTO
     {
         public string Name { get; set; }
 

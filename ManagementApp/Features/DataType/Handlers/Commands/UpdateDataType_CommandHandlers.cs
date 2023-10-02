@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.DataType.Handlers.Commands
 {
-    internal class UpdateDataType_CommandHandlers : IRequestHandler<UpdateDataType_CommandRequest, Unit>
+    public class UpdateDataType_CommandHandlers : IRequestHandler<UpdateDataType_CommandRequest, Unit>
     {
 
         private readonly IDataTypeRepository _repository;

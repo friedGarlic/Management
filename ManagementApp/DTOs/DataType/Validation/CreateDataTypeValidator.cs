@@ -8,7 +8,7 @@ using Management.Application.DTOs.DataType.Process;
 
 namespace Management.Application.DTOs.DataType.Validation
 {
-    internal class CreateDataTypeValidator : AbstractValidator<CreateDataTypeDTO>
+    public class CreateDataTypeValidator : AbstractValidator<CreateDataTypeDTO>
     {
         public CreateDataTypeValidator()
         {

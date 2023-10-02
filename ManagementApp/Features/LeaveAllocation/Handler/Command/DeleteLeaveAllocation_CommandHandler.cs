@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveAllocation.Handler.Command
 {
-    internal class DeleteLeaveAllocation_CommandHandler : IRequestHandler<DeleteLeaveAllocation_CommandRequest, int>
+    public class DeleteLeaveAllocation_CommandHandler : IRequestHandler<DeleteLeaveAllocation_CommandRequest, int>
     {
         private readonly ILeaveAllocationRepository _repository;
         private readonly Mapper _mapper;

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.DataType.Handlers.Queries
 {
-    internal class GetDataType_ListRequestHandler : IRequestHandler<GetDataType_ListRequest, List<DataTypeDTO>>
+    public class GetDataType_ListRequestHandler : IRequestHandler<GetDataType_ListRequest, List<DataTypeDTO>>
     {
         public readonly IDataTypeRepository _dataTypeRepository;
         private readonly IMapper _mapper;

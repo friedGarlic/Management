@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveAllocation.Process
 {
-    internal class CreateLeaveAllocationDTO : LeaveAllocationDTO, ILeaveAllocationDTO
+    public class CreateLeaveAllocationDTO : LeaveAllocationDTO, ILeaveAllocationDTO
     {
     }
 }

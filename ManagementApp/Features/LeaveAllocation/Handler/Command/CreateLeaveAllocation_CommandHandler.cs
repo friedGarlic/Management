@@ -1,20 +1,13 @@
 ﻿using AutoMapper;
-using FluentValidation;
-using Management.Application.DTOs.LeaveAllocation;
 using Management.Application.DTOs.LeaveAllocation.Validation;
-using Management.Application.DTOs.LeaveRequest.Validator;
 using Management.Application.Features.LeaveAllocation.Request.Command;
+using Management.Application.Exceptions;
 using ManagementApp.Contracts;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveAllocation.Handler.Command
 {
-    internal class CreateLeaveAllocation_CommandHandler : IRequestHandler<CreateLeaveAllocation_CommandRequest, int>
+    public class CreateLeaveAllocation_CommandHandler : IRequestHandler<CreateLeaveAllocation_CommandRequest, int>
     {
         private readonly ILeaveAllocationRepository _leaveAllocRepository;
         private readonly IDataTypeRepository _dataTypeRepository;
@@ -37,9 +30,7 @@ namespace Management.Application.Features.LeaveAllocation.Handler.Command
             var validatorResult = await validator.ValidateAsync(request.LeaveAllocationDTO);
 
             if (validatorResult.IsValid == false)
-            {
-                throw new Exception();
-            }
+                throw new ValidationException(validatorResult);
 
             var leaveAlloc = _mapper.Map<Management.LeaveAllocation>(request.LeaveAllocationDTO);
 

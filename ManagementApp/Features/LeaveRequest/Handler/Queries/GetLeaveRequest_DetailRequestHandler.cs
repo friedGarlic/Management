@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveRequest.Handler.Queries
 {
-    internal class GetLeaveRequest_DetailRequestHandler : IRequestHandler<GetLeaveRequest_DetailRequest, LeaveRequestDTO>
+    public class GetLeaveRequest_DetailRequestHandler : IRequestHandler<GetLeaveRequest_DetailRequest, LeaveRequestDTO>
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
         private readonly IMapper _mapper;

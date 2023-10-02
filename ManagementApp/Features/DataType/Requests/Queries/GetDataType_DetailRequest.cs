@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.DataType.Requests.Queries
 {
-    internal class GetDataType_DetailRequest : IRequest<DataTypeDTO>
+    public class GetDataType_DetailRequest : IRequest<DataTypeDTO>
     {
         public int Id { get; set; }
     }

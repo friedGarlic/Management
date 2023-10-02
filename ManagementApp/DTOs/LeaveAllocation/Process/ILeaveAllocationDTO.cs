@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveAllocation.Process
 {
-    internal interface ILeaveAllocationDTO
+    public interface ILeaveAllocationDTO
     {
         public int NumberOfDays { get; set; }
 

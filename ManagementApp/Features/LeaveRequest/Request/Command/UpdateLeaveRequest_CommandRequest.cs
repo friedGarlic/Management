@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveRequest.Request.Command
 {
-    internal class UpdateLeaveRequest_CommandRequest : IRequest<Unit>
+    public class UpdateLeaveRequest_CommandRequest : IRequest<Unit>
     {
         public LeaveRequestDTO LeaveRequestDTO { get; set; }
 

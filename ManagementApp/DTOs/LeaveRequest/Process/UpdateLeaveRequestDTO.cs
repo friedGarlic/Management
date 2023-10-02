@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveRequest.Process
 {
-    internal class UpdateLeaveRequestDTO : LeaveRequestDTO, ILeaveRequestDTO
+    public class UpdateLeaveRequestDTO : LeaveRequestDTO, ILeaveRequestDTO
     {
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }

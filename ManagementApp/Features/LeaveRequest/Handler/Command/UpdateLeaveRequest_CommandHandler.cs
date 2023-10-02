@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveRequest.Handler.Command
 {
-    internal class UpdateLeaveRequest_CommandHandler : IRequestHandler<UpdateLeaveRequest_CommandRequest, Unit>
+    public class UpdateLeaveRequest_CommandHandler : IRequestHandler<UpdateLeaveRequest_CommandRequest, Unit>
     {
         private readonly ILeaveRequestRepository _repository;
         private readonly Mapper _mapper;

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.DTOs.LeaveAllocation.Validation
 {
-    internal class ILeaveAllocation_ValidatorDTO : AbstractValidator<LeaveAllocationDTO>
+    public class ILeaveAllocation_ValidatorDTO : AbstractValidator<LeaveAllocationDTO>
     {
         private readonly IDataTypeRepository _repository;
 
