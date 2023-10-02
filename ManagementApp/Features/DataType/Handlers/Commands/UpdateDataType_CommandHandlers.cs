@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Management.Application.DTOs.DataType.Validation;
 using Management.Application.Features.DataType.Requests.Commands;
 using ManagementApp.Contracts;
 using MediatR;
@@ -25,6 +26,9 @@ namespace Management.Application.Features.DataType.Handlers.Commands
 
         public async Task<Unit> Handle(UpdateDataType_CommandRequest request, CancellationToken cancellationToken)
         {
+            var validator = new UpdateDataTypeValidator();
+            var validatorResult = await validator.ValidateAsync(request.DataTypeDTO);
+
             var dataType = await _repository.Get(request.DataTypeDTO.Id);
 
             _mapper.Map(request.DataTypeDTO, dataType);

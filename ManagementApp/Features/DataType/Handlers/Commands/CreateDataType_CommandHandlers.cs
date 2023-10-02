@@ -21,7 +21,7 @@ namespace Management.Application.Features.DataType.Handlers.Commands
         public async Task<int> Handle(CreateDataType_CommandRequest request, CancellationToken cancellationToken)
         {
             var validator = new CreateDataTypeValidator();
-            var validatorResult = await validator.ValidateAsync(request.CreateDataTypeDTO);
+            var validatorResult = await validator.ValidateAsync(request.DataTypeDTO);
 
             if (validatorResult.IsValid == false)
                 throw new ValidationException(validatorResult);

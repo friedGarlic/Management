@@ -11,6 +11,5 @@ namespace Management.Application.Features.DataType.Requests.Commands
     public class CreateDataType_CommandRequest : IRequest<int>
     {
         public DataTypeDTO DataTypeDTO { get; set; }
-        public CreateDataTypeDTO CreateDataTypeDTO { get; set; }
     }
 }
