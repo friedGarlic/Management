@@ -13,6 +13,8 @@ namespace Management.Application.Features.LeaveRequest.Request.Command
     {
         public LeaveRequestDTO LeaveRequestDTO { get; set; }
 
+        public UpdateLeaveRequestDTO UpdateLeaveRequestDTO { get; set; }
+
         public ChangeLeaveRequestApprovalDTO ChangeLeaveRequestApprovalDTO { get; set; }
     }
 }
