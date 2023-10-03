@@ -24,9 +24,8 @@ namespace Management.Application.Features.LeaveAllocation.Handler.Command
 
         public async Task<int> Handle(CreateLeaveAllocation_CommandRequest request, CancellationToken cancellationToken)
         {
-            //TODO REMINDER THIS IS NOT CreateLeaveAllocation_ValidatorDTO
-            var validator = new CreateLeaveAllocation_ValidatorDTO(_dataTypeRepository);
-            var validatorResult = await validator.ValidateAsync(request.LeaveAllocationDTO);
+            var createValidator = new CreateLeaveAllocation_ValidatorDTO(_dataTypeRepository);
+            var validatorResult = await createValidator.ValidateAsync(request.LeaveAllocationDTO);
 
             if (validatorResult.IsValid == false)
                 throw new ValidationException(validatorResult);

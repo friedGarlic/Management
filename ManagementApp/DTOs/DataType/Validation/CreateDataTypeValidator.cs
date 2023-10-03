@@ -8,6 +8,8 @@ using Management.Application.DTOs.DataType.Process;
 
 namespace Management.Application.DTOs.DataType.Validation
 {
+
+    //TODO REMINDER this is a DATATYPEDTO as field parameter not CreateDataTypeDTO
     public class CreateDataTypeValidator : AbstractValidator<DataTypeDTO>
     {
         public CreateDataTypeValidator()

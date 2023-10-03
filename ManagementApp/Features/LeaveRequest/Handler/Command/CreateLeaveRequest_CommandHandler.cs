@@ -1,16 +1,9 @@
 ﻿using AutoMapper;
-using FluentValidation;
-using Management.Application.DTOs.DataType.Validation;
-using Management.Application.DTOs.LeaveAllocation.Validation;
 using Management.Application.DTOs.LeaveRequest.Validator;
 using Management.Application.Features.LeaveRequest.Request.Command;
 using ManagementApp.Contracts;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Management.Application.Exceptions;
 
 namespace Management.Application.Features.LeaveRequest.Handler.Command
 {
@@ -30,15 +23,11 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
 
         public async Task<int> Handle(CreateLeaveRequest_CommandRequest commandRequest, CancellationToken token)
         {
-            var validator = new ILeaveRequest_ValidatorDTO(_dataTypeRepository);
-
-            //TODO REMINDER THIS IS NOT CreateLeaveRequest_ValidatorDTO
+            var validator = new CreateLeaveRequest_ValidatorDTO(_dataTypeRepository);
             var validatorResult = await validator.ValidateAsync(commandRequest.LeaveRequestDTO);
 
-            if (validatorResult != null)
-            {
-                throw new Exception();
-            }
+            if (validatorResult.IsValid == false)
+                throw new ValidationException(validatorResult);
 
             var leaveRequest = _mapper.Map<Management.LeaveRequest>(commandRequest);
 

@@ -4,6 +4,7 @@ using ManagementApp.Contracts;
 
 namespace Management.Application.DTOs.LeaveAllocation.Validation
 {
+    //TODO REMINDER this is LeaveAllocationDTO field parameter not CreateLeaveAllocationDTO
     public class CreateLeaveAllocation_ValidatorDTO : AbstractValidator<LeaveAllocationDTO>
     {
         private readonly IDataTypeRepository _repository;
