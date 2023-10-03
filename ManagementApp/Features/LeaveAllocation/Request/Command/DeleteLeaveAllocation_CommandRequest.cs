@@ -10,6 +10,8 @@ namespace Management.Application.Features.LeaveAllocation.Request.Command
 {
     public class DeleteLeaveAllocation_CommandRequest : IRequest<int>
     {
+        public int Id { get; set; }
+
         public LeaveAllocationDTO LeaveAllocationDTO { get; set; }
     }
 }
