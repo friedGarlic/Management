@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Management.Application.Exceptions;
 using Management.Application.Features.LeaveRequest.Request.Command;
 using ManagementApp.Contracts;
 using MediatR;
@@ -23,6 +24,8 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
 
         public async Task<Unit> Handle(DeleteLeaveRequest_CommandRequest commandRequest, CancellationToken token)
         {
+            throw new NotFoundException(nameof(LeaveRequest), commandRequest.ID);
+
             var leaveRequest = await _repository.Get(commandRequest.LeaveRequestDTO.Id);
 
             await _repository.Delete(leaveRequest);
