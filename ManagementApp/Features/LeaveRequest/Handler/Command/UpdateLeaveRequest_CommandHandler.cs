@@ -23,7 +23,7 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
         public async Task<Unit> Handle(UpdateLeaveRequest_CommandRequest commandRequest, CancellationToken token)
         {
             var updateValidator = new UpdateLeaveRequest_ValidatorDTO(_dataTypeRepository);
-            var validatorResult = await updateValidator.ValidateAsync(commandRequest.UpdateLeaveRequestDTO);
+            var validatorResult = await updateValidator.ValidateAsync(commandRequest.LeaveRequestDTO);
 
             if (validatorResult.IsValid == false)
             {
