@@ -1,4 +1,5 @@
 ﻿using Management.Application.DTOs.LeaveRequest.Process;
+using Management.Application.Responses;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Management.Application.Features.LeaveRequest.Request.Command
 {
-    public class CreateLeaveRequest_CommandRequest : IRequest<int>
+    public class CreateLeaveRequest_CommandRequest : IRequest<BaseCommandResponse>
     {
             public LeaveRequestDTO LeaveRequestDTO { get; set; }
     }
