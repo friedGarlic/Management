@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace Management.Persistence.Repositories
 {
-    public class GenericRepositories<T> : IGenericRepository<T> where T : class
+    public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         private readonly ManagementdbContext _context;
 
-        public GenericRepositories(ManagementdbContext context)
+        public GenericRepository(ManagementdbContext context)
         {
             _context = context;
         }
