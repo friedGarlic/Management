@@ -24,15 +24,14 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
 
         public async Task<Unit> Handle(DeleteLeaveRequest_CommandRequest commandRequest, CancellationToken token)
         {
-            var request = _repository.Get(commandRequest.ID);
+            var request = await _repository.Get(commandRequest.ID);
+
             if (request == null)
             {
                 throw new NotFoundException(nameof(commandRequest), commandRequest.ID);
             }
 
-            var leaveRequest = await _repository.Get(commandRequest.LeaveRequestDTO.Id);
-
-            await _repository.Delete(leaveRequest);
+            await _repository.Delete(request);
 
             return Unit.Value;
         }

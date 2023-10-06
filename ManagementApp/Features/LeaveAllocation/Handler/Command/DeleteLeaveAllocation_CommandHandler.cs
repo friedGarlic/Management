@@ -24,19 +24,16 @@ namespace Management.Application.Features.LeaveAllocation.Handler.Command
 
         public async Task<int> Handle(DeleteLeaveAllocation_CommandRequest request, CancellationToken cancellationToken)
         {
-            var idRequest = _repository.Get(request.Id);
+            var idRequest = await _repository.Get(request.Id);
 
             if (idRequest == null)
             {
                 throw new NotFoundException(nameof(LeaveAllocation),request.Id);
             }
 
-            //get id of request
-            var leaveAlloc = await _repository.Get(request.LeaveAllocationDTO.Id);
-            //delete
-            await _repository.Delete(leaveAlloc);
+            await _repository.Delete(idRequest);
 
-            return leaveAlloc.Id;
+            return idRequest.Id;
         }
     }
 }
