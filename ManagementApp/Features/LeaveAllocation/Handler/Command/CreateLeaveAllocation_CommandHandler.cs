@@ -2,8 +2,8 @@
 using Management.Application.DTOs.LeaveAllocation.Validation;
 using Management.Application.Features.LeaveAllocation.Request.Command;
 using Management.Application.Exceptions;
-using ManagementApp.Contracts;
 using MediatR;
+using Management.Application.Contracts.Persistence;
 
 namespace Management.Application.Features.LeaveAllocation.Handler.Command
 {

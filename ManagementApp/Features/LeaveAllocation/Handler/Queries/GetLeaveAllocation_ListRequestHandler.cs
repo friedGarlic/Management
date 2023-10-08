@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using Management.Application.Contracts.Persistence;
 using Management.Application.DTOs.LeaveAllocation.Process;
 using Management.Application.Features.DataType.Requests.Queries;
 using Management.Application.Features.LeaveAllocation.Request.Queries;
-using ManagementApp.Contracts;
 using MediatR;
 using System;
 using System.Collections.Generic;

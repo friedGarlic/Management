@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using Management.Application.Contracts.Persistence;
 using Management.Application.DTOs.LeaveRequest.Process;
 using Management.Application.Features.LeaveRequest.Request.Queries;
-using ManagementApp.Contracts;
 using MediatR;
 using System;
 using System.Collections.Generic;

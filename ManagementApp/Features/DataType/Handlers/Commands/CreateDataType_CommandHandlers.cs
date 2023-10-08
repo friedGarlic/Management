@@ -1,9 +1,9 @@
 ﻿using AutoMapper;
 using Management.Application.Features.DataType.Requests.Commands;
-using ManagementApp.Contracts;
 using MediatR;
 using Management.Application.DTOs.DataType.Validation;
 using Management.Application.Exceptions;
+using Management.Application.Contracts.Persistence;
 
 namespace Management.Application.Features.DataType.Handlers.Commands
 {

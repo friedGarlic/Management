@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
+using Management.Application.Contracts.Persistence;
 using Management.Application.DTOs.LeaveAllocation.Process;
-using ManagementApp.Contracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

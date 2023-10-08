@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using Management.Application.Contracts.Persistence;
 using Management.Application.DTOs.LeaveAllocation.Validation;
 using Management.Application.Exceptions;
 using Management.Application.Features.LeaveAllocation.Request.Command;
-using ManagementApp.Contracts;
 using MediatR;
 using System;
 using System.Collections.Generic;

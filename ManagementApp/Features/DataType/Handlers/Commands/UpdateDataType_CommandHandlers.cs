@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
+using Management.Application.Contracts.Persistence;
 using Management.Application.DTOs.DataType.Validation;
 using Management.Application.Exceptions;
 using Management.Application.Features.DataType.Requests.Commands;
-using ManagementApp.Contracts;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;

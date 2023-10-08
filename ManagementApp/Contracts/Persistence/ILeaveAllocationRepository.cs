@@ -1,6 +1,6 @@
 ﻿using Management;
 
-namespace ManagementApp.Contracts
+namespace Management.Application.Contracts.Persistence
 {
     public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
     {

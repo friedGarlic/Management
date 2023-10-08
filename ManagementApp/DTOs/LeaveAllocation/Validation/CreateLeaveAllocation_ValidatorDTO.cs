@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
+using Management.Application.Contracts.Persistence;
 using Management.Application.DTOs.LeaveAllocation.Process;
-using ManagementApp.Contracts;
 
 namespace Management.Application.DTOs.LeaveAllocation.Validation
 {

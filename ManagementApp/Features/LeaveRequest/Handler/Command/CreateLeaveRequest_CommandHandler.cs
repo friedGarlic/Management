@@ -1,10 +1,10 @@
 ﻿using AutoMapper;
 using Management.Application.DTOs.LeaveRequest.Validator;
 using Management.Application.Features.LeaveRequest.Request.Command;
-using ManagementApp.Contracts;
 using MediatR;
 using Management.Application.Exceptions;
 using Management.Application.Responses;
+using Management.Application.Contracts.Persistence;
 
 namespace Management.Application.Features.LeaveRequest.Handler.Command
 {
