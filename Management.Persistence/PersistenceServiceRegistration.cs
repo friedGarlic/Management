@@ -2,7 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Management.Persistence.Repositories;
-using ManagementApp.Contracts;
+using Management.Application.Contracts.Persistence;
 
 namespace Management.Persistence
 {

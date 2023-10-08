@@ -19,9 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Management.Domain", "Manage
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Management.Application", "ManagementApp\Management.Application.csproj", "{EE137E96-ACB1-49D5-9BC9-C1F7703C5DCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Management.Infrastructure", "Management.Infrastructure\Management.Infrastructure.csproj", "{98AEA348-FC29-41F0-A16B-52BA96864C9A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Management.Infrastructure", "Management.Infrastructure\Management.Infrastructure.csproj", "{98AEA348-FC29-41F0-A16B-52BA96864C9A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Management.Persistence", "Management.Persistence\Management.Persistence.csproj", "{6FACE0F6-5327-4039-86A9-35B5E48258A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Management.Persistence", "Management.Persistence\Management.Persistence.csproj", "{6FACE0F6-5327-4039-86A9-35B5E48258A5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
