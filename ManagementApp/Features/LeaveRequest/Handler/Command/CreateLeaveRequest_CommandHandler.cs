@@ -5,6 +5,8 @@ using MediatR;
 using Management.Application.Exceptions;
 using Management.Application.Responses;
 using Management.Application.Contracts.Persistence;
+using Management.Application.Contracts.Infrastructure;
+using Management.Application.Model;
 
 namespace Management.Application.Features.LeaveRequest.Handler.Command
 {
@@ -13,13 +15,17 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
         private readonly ILeaveRequestRepository _repository;
         private readonly IDataTypeRepository _dataTypeRepository;
         private readonly Mapper _mapper;
+        private readonly IEmailServices _emailServices;
 
         public CreateLeaveRequest_CommandHandler(ILeaveRequestRepository repository, 
-            IDataTypeRepository dataTypeRepository, Mapper mapper)
+            IDataTypeRepository dataTypeRepository, 
+            IEmailServices email, 
+            Mapper mapper)
         {
             _repository = repository;
             _dataTypeRepository = dataTypeRepository;
             _mapper = mapper;
+            _emailServices = email;
         }
 
         public async Task<BaseCommandResponse> Handle(CreateLeaveRequest_CommandRequest commandRequest, CancellationToken token)
@@ -43,7 +49,22 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
             response.Success = true;
             response.Id = leaveRequest.Id;
 
+            var newEmail = new Email
+            {
+                From = "remcarlmerza@gmail.com",
+                To = "remcarl2121@gmail.com",
+                Body = $"Your leave request from {commandRequest.LeaveRequestDTO.StartDate} to {commandRequest.LeaveRequestDTO.EndDate} is been approved",
+            };
+            try
+            {
+                await _emailServices.SendEmail(newEmail);
+            }
+            catch(Exception ex) { 
+                
+            }
+
             return response;
+
         }
     }
 }

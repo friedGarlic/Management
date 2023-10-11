@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Management.Application.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace Management.Application.Contracts.Infrastructure
 {
     public interface IEmailServices
     {
-        public string Send {  get; set; }
+        Task<bool> SendEmail(Email email);
+
     }
 }
