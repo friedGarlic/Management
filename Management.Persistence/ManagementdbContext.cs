@@ -6,9 +6,11 @@ namespace Management.Persistence
     public class ManagementdbContext : DbContext
     {
         public ManagementdbContext(DbContextOptions<ManagementdbContext> options) : base(options)
-        {
-            
-        }
+        {}
+
+        public DbSet<DataType> DbDataType { get; set; }
+        public DbSet<LeaveAllocation> DbLeaveAllocation { get; set; }
+        public DbSet<LeaveRequest> DbLeaveRequest { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder) //to see the data base table
         {
@@ -29,8 +31,5 @@ namespace Management.Persistence
             return base.SaveChangesAsync(token);
         }
 
-        public DbSet<DataType> DbDataType { get; set; }
-        public DbSet<LeaveAllocation> DbLeaveAllocation { get; set; }
-        public DbSet<LeaveRequest> DbLeaveRequest { get; set; }
     }
 }

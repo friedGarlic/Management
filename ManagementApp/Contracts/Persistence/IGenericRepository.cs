@@ -10,7 +10,6 @@ namespace Management.Application.Contracts.Persistence
     {
         Task<T> Get(int id);
         Task<IReadOnlyList<T>> GetAll();
-        Task<T> Create(T entity);
         Task<T> Add(T entity);
         Task Update(T entity);
         Task Delete(T entity);

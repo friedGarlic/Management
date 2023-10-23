@@ -12,7 +12,7 @@ namespace Management.Persistence
             IConfiguration configuration)
         {
             services.AddDbContext<ManagementdbContext>(option => option.UseSqlServer(
-                configuration.GetConnectionString("ManagementConnectionString")
+                configuration.GetConnectionString("DefaultConnection")
                 ));
 
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));

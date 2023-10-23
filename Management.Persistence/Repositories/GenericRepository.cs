@@ -23,11 +23,6 @@ namespace Management.Persistence.Repositories
             return entity;
         }
 
-        public async Task<T> Create(T entity)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task Delete(T entity)
         {
             _context.Remove(entity);

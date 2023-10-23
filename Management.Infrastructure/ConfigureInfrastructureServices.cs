@@ -15,9 +15,9 @@ namespace Management.Infrastructure
 {
     public static class ConfigureInfrastructureServices
     {
-        public static IServiceCollection ConfigureService(this IServiceCollection service, IConfiguration configure)
+        public static IServiceCollection ConfigureInfrastructureService(this IServiceCollection service, IConfiguration configure)
         {
-            service.Configure<EmailSetting>(configure.GetSection("EmailSettings"));
+            service.Configure<EmailSetting>(configure.GetSection("EmailSetting"));
             service.AddTransient<IEmailServices, EmailServices>();
 
             return service;

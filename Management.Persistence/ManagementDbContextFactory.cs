@@ -16,7 +16,7 @@ namespace Management.Persistence
                 .Build();
 
             var builder = new DbContextOptionsBuilder<ManagementdbContext>();
-            var connectionString = config.GetConnectionString("ManagementConnectionString");
+            var connectionString = config.GetConnectionString("DefaultConnection");
                 
             builder.UseSqlServer(connectionString);
 
