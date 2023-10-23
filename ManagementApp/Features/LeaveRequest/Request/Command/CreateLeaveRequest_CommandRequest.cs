@@ -11,6 +11,7 @@ namespace Management.Application.Features.LeaveRequest.Request.Command
 {
     public class CreateLeaveRequest_CommandRequest : IRequest<BaseCommandResponse>
     {
-            public LeaveRequestDTO LeaveRequestDTO { get; set; }
+        public LeaveRequestDTO LeaveRequestDTO { get; set; }
+        public CreateLeaveRequestDTO CreateLeaveRequestDTO { get; set; }
     }
 }

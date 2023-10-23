@@ -2,8 +2,8 @@
 using MediatR;
 using Management.Application.DTOs.DataType.Process;
 using Management.Application.Features.LeaveRequest.Request.Queries;
-using Management.Application.Features.DataType.Handlers.Commands;
 using Management.Application.Features.DataType.Requests.Commands;
+using Management.Application.Features.DataType.Requests.Queries;
 
 namespace Management.API.Controllers
 {
@@ -22,14 +22,14 @@ namespace Management.API.Controllers
         [HttpGet] //Get Api/Controller
         public async Task<ActionResult<List<DataTypeDTO>>> Get()
         {
-            var dataType = await _mediator.Send(new GetLeaveRequest_ListRequest());
+            var dataType = await _mediator.Send(new GetDataType_ListRequest());
             return Ok(dataType);
         }
 
         [HttpGet("{Id}")] //Get Api/controller/id
         public async Task<ActionResult> Get(int id) {
 
-            var dataType = await _mediator.Send(new GetLeaveRequest_ListRequest { Id = id});
+            var dataType = await _mediator.Send(new GetDataType_DetailRequest { Id = id});
             return Ok(dataType);
         }
 

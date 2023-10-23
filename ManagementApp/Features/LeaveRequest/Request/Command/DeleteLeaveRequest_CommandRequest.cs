@@ -11,7 +11,7 @@ namespace Management.Application.Features.LeaveRequest.Request.Command
     public class DeleteLeaveRequest_CommandRequest : IRequest<Unit>
     {
         public int ID { get; set; } //TODO idk why theres a object of id when theres a leaverequestDTO.id
-
+        public int Id { get; set; }
         public LeaveRequestDTO LeaveRequestDTO { get; set; }
     }
 }

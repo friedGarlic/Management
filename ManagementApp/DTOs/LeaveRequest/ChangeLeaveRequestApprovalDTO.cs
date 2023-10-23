@@ -10,5 +10,6 @@ namespace Management.Application.DTOs.LeaveRequest
     public class ChangeLeaveRequestApprovalDTO : BaseDTO
     {
         public bool? IsApproved { get; set; }
+        public ChangeLeaveRequestApprovalDTO ChangeLeaveRequestDTO { get; set; }
     }
 }
