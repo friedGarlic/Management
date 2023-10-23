@@ -21,4 +21,8 @@
     <ProjectReference Include="..\ManagementApp\Management.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+  </ItemGroup>
+
 </Project>

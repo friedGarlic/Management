@@ -19,7 +19,7 @@ namespace Management.Application.Features.DataType.Handlers.Commands
             _repository = repository;
         }
 
-        public async Task<int> Handle(DeleteDataType_CommandRequest request, CancellationToken)
+        public async Task<int> Handle(DeleteDataType_CommandRequest request, CancellationToken cancellationToken)
         {
             var getID = await _repository.Get(request.Id);
 
