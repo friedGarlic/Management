@@ -34,7 +34,7 @@ namespace Management.API.Controllers
             return Ok(LeaveRequest);
         }
 
-        [HttpPost]
+        [NonAction]
         public async Task<ActionResult> Post([FromBody] CreateLeaveRequestDTO createLeaveRequest)
         {
             var command = new CreateLeaveRequest_CommandRequest { CreateLeaveRequestDTO = createLeaveRequest };
@@ -42,7 +42,7 @@ namespace Management.API.Controllers
             return Ok(response);
         }
 
-        [HttpPost]
+        [NonAction]
         public async Task<ActionResult> Put([FromBody] LeaveRequestDTO LeaveRequestDTO)
         {
             var updateCommand = new UpdateLeaveRequest_CommandRequest { LeaveRequestDTO = LeaveRequestDTO };
@@ -54,6 +54,7 @@ namespace Management.API.Controllers
         public async Task<ActionResult> ChangeApproval (int id, [FromBody] ChangeLeaveRequestApprovalDTO _changeLeaveRequestDTO)
         {
             var command = new ChangeLeaveRequestApprovalDTO { Id = id, ChangeLeaveRequestDTO = _changeLeaveRequestDTO };
+            await _mediator.Send(command);
             return NoContent();
         }
 

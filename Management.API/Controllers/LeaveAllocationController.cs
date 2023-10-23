@@ -31,16 +31,16 @@ namespace Management.API.Controllers
             return Ok(get);
         }
 
-        [HttpPost("{id}")]
-        public async Task<ActionResult> Put(int id, [FromBody] LeaveAllocationDTO leaveAllocationDTO)
+        [NonAction]
+        public async Task<ActionResult> Put([FromBody] LeaveAllocationDTO leaveAllocationDTO)
         {
             var leaveAlloc = new CreateLeaveAllocation_CommandRequest { LeaveAllocationDTO = leaveAllocationDTO };
             var command = await _mediator.Send(leaveAlloc);
-            return Ok(command);
+            return NoContent();
         }
 
-        [HttpPost("{id}")]
-        public async Task<ActionResult> Post(int id, [FromBody] CreateLeaveAllocationDTO leaveAllocationDTO)
+        [NonAction]
+        public async Task<ActionResult> Post([FromBody] CreateLeaveAllocationDTO leaveAllocationDTO)
         {
             var leaveAlloc = new CreateLeaveAllocation_CommandRequest { CreateLeaveAllocationDTO = leaveAllocationDTO };
             var command = await _mediator.Send(leaveAlloc);
@@ -50,7 +50,7 @@ namespace Management.API.Controllers
         [HttpPost("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var command = await _mediator.Send(new DeleteLeaveAllocation_CommandRequest { Id = id });
+            await _mediator.Send(new DeleteLeaveAllocation_CommandRequest { Id = id });
             return NoContent();
         }
     }
