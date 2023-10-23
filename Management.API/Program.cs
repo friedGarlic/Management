@@ -2,13 +2,17 @@ using Management.Application;
 using Management.Infrastructure;
 using Management.Persistence;
 using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 //
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.ConfigurePersistenceServices(builder.Configuration);
-//builder.Services.ConfigureApplicationService();
 builder.Services.ConfigureInfrastructureService(builder.Configuration);
+
+//builder.Services.ConfigureApplicationService();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
 
 //
 builder.Services.AddControllers();

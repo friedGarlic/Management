@@ -34,7 +34,7 @@ namespace Management.API.Controllers
             return Ok(LeaveRequest);
         }
 
-        [NonAction]
+        [HttpPost]
         public async Task<ActionResult> Post([FromBody] CreateLeaveRequestDTO createLeaveRequest)
         {
             var command = new CreateLeaveRequest_CommandRequest { CreateLeaveRequestDTO = createLeaveRequest };
@@ -42,7 +42,7 @@ namespace Management.API.Controllers
             return Ok(response);
         }
 
-        [NonAction]
+        [HttpPut]
         public async Task<ActionResult> Put([FromBody] LeaveRequestDTO LeaveRequestDTO)
         {
             var updateCommand = new UpdateLeaveRequest_CommandRequest { LeaveRequestDTO = LeaveRequestDTO };

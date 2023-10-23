@@ -41,7 +41,7 @@ namespace Management.API.Controllers
             return Ok(response);
         }
 
-        [NonAction]
+        [HttpPut]
         public async Task<ActionResult> Put([FromBody] DataTypeDTO dataTypeDTO)
         {
             var updateCommand = new UpdateDataType_CommandRequest { DataTypeDTO = dataTypeDTO };
@@ -49,7 +49,7 @@ namespace Management.API.Controllers
             return NoContent(); // as updatecommand handler returns Unit.value which is NULL or VOID;
         }
 
-        [NonAction]
+        [HttpPost("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
             var deleteCommand = new DeleteDataType_CommandRequest { Id = id };

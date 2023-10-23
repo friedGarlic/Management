@@ -31,15 +31,15 @@ namespace Management.API.Controllers
             return Ok(get);
         }
 
-        [NonAction]
+        [HttpPut]
         public async Task<ActionResult> Put([FromBody] LeaveAllocationDTO leaveAllocationDTO)
         {
-            var leaveAlloc = new CreateLeaveAllocation_CommandRequest { LeaveAllocationDTO = leaveAllocationDTO };
+            var leaveAlloc = new UpdateLeaveAllocation_CommandRequest { LeaveAllocationDTO  = leaveAllocationDTO };
             var command = await _mediator.Send(leaveAlloc);
             return NoContent();
         }
 
-        [NonAction]
+        [HttpPost]
         public async Task<ActionResult> Post([FromBody] CreateLeaveAllocationDTO leaveAllocationDTO)
         {
             var leaveAlloc = new CreateLeaveAllocation_CommandRequest { CreateLeaveAllocationDTO = leaveAllocationDTO };

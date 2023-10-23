@@ -60,7 +60,7 @@ namespace Management.Application.Features.LeaveRequest.Handler.Command
                 await _emailServices.SendEmail(newEmail);
             }
             catch(Exception ex) { 
-                
+             
             }
 
             return response;
