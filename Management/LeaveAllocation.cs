@@ -1,8 +1,8 @@
-﻿using Management.Common;
+﻿using Management.Domain;
 
 namespace Management
 {
-    public class LeaveAllocation : ModifyEntity
+    public class LeaveAllocation : BaseDomainEntity
     {
         public int Id { get; set; }
 

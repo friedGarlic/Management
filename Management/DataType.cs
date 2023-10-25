@@ -1,11 +1,11 @@
-﻿using Management.Common;
+﻿using Management.Domain;
 
 namespace Management
 {
-    public class DataType : ModifyEntity
+    public class DataType : BaseDomainEntity
     {
-        public int Id { get; set; }
-
         public string Name { get; set; }
+
+        public int LeaveTypeDefaultDays { get; set; }
     }
 }

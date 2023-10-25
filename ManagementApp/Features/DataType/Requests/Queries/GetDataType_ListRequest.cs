@@ -10,6 +10,5 @@ namespace Management.Application.Features.DataType.Requests.Queries
 {
     public class GetDataType_ListRequest : IRequest<List<DataTypeDTO>>
     {
-        public int Id { get; set; }
     }
 }

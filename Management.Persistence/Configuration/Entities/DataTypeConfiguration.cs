@@ -16,19 +16,12 @@ namespace Management.Persistence.Configuration.Entities
                 new DataType
                 {
                     Id = 1,
-                    Name = "SickLeave",
-                    CreatedBy = "",
-                    DateCreated = DateTime.Now,
-                     DateModified = DateTime.Now,
-                      ModifiedBy = ""
+                    Name = "SickLeave"
                 }
                 ,new DataType
                 {
                     Id = 2,
-                    Name = "Vacation",
-                    CreatedBy = "",
-                    DateModified = DateTime.Now,
-                    ModifiedBy = ""
+                    Name = "Vacation"
                 }
             );
         }

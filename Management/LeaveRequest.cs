@@ -1,8 +1,8 @@
-﻿using Management.Common;
+﻿using Management.Domain;
 
 namespace Management
 {
-    public class LeaveRequest : ModifyEntity
+    public class LeaveRequest : BaseDomainEntity
     {
         public int Id { get; set; }
 
